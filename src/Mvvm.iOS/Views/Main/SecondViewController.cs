@@ -6,7 +6,7 @@ using UIKit;
 
 namespace Mvvm.iOS.Views.Main
 {
-    public partial class SecondViewController : BaseViewController<SecondViewModel>
+    public class SecondViewController : BaseViewController<SecondViewModel>
     {
         private UILabel _labelWelcome, _labelMessage;
         UIButton _navigateButton;

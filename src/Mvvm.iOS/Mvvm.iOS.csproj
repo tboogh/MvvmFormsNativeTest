@@ -136,9 +136,7 @@
       <Visible>false</Visible>
     </ImageAsset>
     <Compile Include="Views\Main\SecondViewController.cs" />
-    <Compile Include="Views\Main\SecondViewController.designer.cs">
-      <DependentUpon>SecondViewController.cs</DependentUpon>
-    </Compile>
+    <Compile Include="Views\Tab\TabViewController.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -212,6 +210,9 @@
     <ImageAsset Include="Resources\Media.xcassets\LaunchImages.launchimage\Contents.json">
       <Visible>false</Visible>
     </ImageAsset>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Views\Tab\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

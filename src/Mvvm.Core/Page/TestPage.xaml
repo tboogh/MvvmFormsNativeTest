@@ -4,9 +4,10 @@
              x:Class="Mvvm.Core.Page.TestPage">
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
+            <Label Text="{Binding Title}"
                 VerticalOptions="CenterAndExpand" 
                 HorizontalOptions="CenterAndExpand" />
+            <Button Text="Show Tabs!" Command="{Binding NavigateToTabCommand}" BackgroundColor="Blue" TextColor="White"/> 
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

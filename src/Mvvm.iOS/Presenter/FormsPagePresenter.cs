@@ -6,10 +6,13 @@ using System.Text;
 using Foundation;
 using Mvvm.Core.Page;
 using Mvvm.Core.ViewModels.Main;
+using MvvmCross;
 using MvvmCross.Platforms.Ios.Presenters;
+using MvvmCross.Platforms.Ios.Presenters.Attributes;
 using MvvmCross.Presenters;
 using MvvmCross.ViewModels;
 using UIKit;
+using Xamarin.Forms;
 using Xamarin.Forms.Platform.iOS;
 
 namespace Mvvm.iOS.Presenter
@@ -22,12 +25,32 @@ namespace Mvvm.iOS.Presenter
 
         public override void Show(MvxViewModelRequest request)
         {
+            var viewModelLoader = Mvx.Resolve<IMvxViewModelLoader>();
+            var viewModel = viewModelLoader.LoadViewModel(request, null);
             if (request.ViewModelType == typeof(FormsViewModel))
             {
-                
-                var page = new TestPage();
+
+                var page = new TestPage
+                {
+                    BindingContext = viewModel
+                };
                 var viewController = page.CreateViewController();
                 MasterNavigationController.PushViewController(viewController, true);
+                return;
+            }
+
+            if (request.ViewModelType == typeof(FormsTabViewModel))
+            {
+                var page = new TabPage()
+                {
+                    BindingContext = viewModel
+                };
+                var viewController = page.CreateViewController();
+                var attribute = new MvxTabPresentationAttribute()
+                {
+                    TabName = "FormsTab"
+                };
+                TabBarViewController.ShowTabView(viewController, attribute);
                 return;
             }
             base.Show(request);
