@@ -11,7 +11,5 @@ namespace Mvvm.Core.Page
         {
             InitializeComponent();
         }
-
-        public string TabName = "FormsTab";
     }
 }

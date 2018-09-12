@@ -48,7 +48,7 @@ namespace Mvvm.iOS.Presenter
                 var viewController = page.CreateViewController();
                 var attribute = new MvxTabPresentationAttribute()
                 {
-                    TabName = page.TabName
+                    TabName = page.Title
                 };
                 TabBarViewController.ShowTabView(viewController, attribute);
                 return;
