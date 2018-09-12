@@ -10,7 +10,7 @@ namespace Mvvm.Droid
     {
         protected override IMvxAndroidViewPresenter CreateViewPresenter()
         {
-            return new DroidFormsPagePresenter(AndroidViewAssemblies);
+            return new FormsPagePresenter(AndroidViewAssemblies);
         }
     }
 }
