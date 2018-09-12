@@ -60,7 +60,7 @@
   <ItemGroup>
     <Compile Include="Linker\LinkerPleaseInclude.cs" />
     <Compile Include="MainApplication.cs" />
-    <Compile Include="Presenter\DroidFormsPagePresenter.cs" />
+    <Compile Include="Presenter\FormsPagePresenter.cs" />
     <Compile Include="Setup.cs" />
     <Compile Include="Views\!Base\BaseActivity.cs" />
     <Compile Include="Views\!Base\BaseFragment.cs" />

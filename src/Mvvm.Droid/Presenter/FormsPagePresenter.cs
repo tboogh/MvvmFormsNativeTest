@@ -12,7 +12,7 @@ using Xamarin.Forms.Platform.Android;
 
 namespace Mvvm.Droid.Presenter
 {
-    public class DroidFormsPagePresenter : MvxAppCompatViewPresenter 
+    public class FormsPagePresenter : MvxAppCompatViewPresenter 
     {
         protected override IMvxFragmentView CreateFragment(MvxBasePresentationAttribute attribute, string fragmentName)
         {
@@ -33,7 +33,7 @@ namespace Mvvm.Droid.Presenter
             base.Show(request);
         }
 
-        public DroidFormsPagePresenter(IEnumerable<Assembly> androidViewAssemblies) : base(androidViewAssemblies)
+        public FormsPagePresenter(IEnumerable<Assembly> androidViewAssemblies) : base(androidViewAssemblies)
         {
         }
     }
