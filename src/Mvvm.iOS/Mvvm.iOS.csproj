@@ -158,6 +158,9 @@
     <PackageReference Include="MvvmCross.CodeAnalysis">
       <Version>6.1.2</Version>
     </PackageReference>
+    <PackageReference Include="MvvmCross.Forms">
+      <Version>6.1.2</Version>
+    </PackageReference>
   </ItemGroup>
   <ItemGroup>
     <ImageAsset Include="Resources\Media.xcassets\AppIcons.appiconset\Contents.json">

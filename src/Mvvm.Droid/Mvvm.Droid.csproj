@@ -60,6 +60,7 @@
   <ItemGroup>
     <Compile Include="Linker\LinkerPleaseInclude.cs" />
     <Compile Include="MainApplication.cs" />
+    <Compile Include="Presenter\DroidFormsPagePresenter.cs" />
     <Compile Include="Setup.cs" />
     <Compile Include="Views\!Base\BaseActivity.cs" />
     <Compile Include="Views\!Base\BaseFragment.cs" />
@@ -82,11 +83,14 @@
     <PackageReference Include="MvvmCross.Droid.Support.V7.AppCompat">
       <Version>6.1.2</Version>
     </PackageReference>
+    <PackageReference Include="MvvmCross.Forms">
+      <Version>6.1.2</Version>
+    </PackageReference>
     <PackageReference Include="Xamarin.Android.Support.Constraint.Layout">
       <Version>1.1.2</Version>
     </PackageReference>
     <PackageReference Include="Xamarin.Android.Support.Design">
-      <Version>27.0.2.1</Version>
+      <Version>27.0.2</Version>
     </PackageReference>
   </ItemGroup>
   <ItemGroup>
@@ -95,6 +99,10 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\layout\fragment_main.axml" />
+    <AndroidResource Include="Resources\layout\fragment_second.axml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateGeneratedFiles</Generator>
+    </AndroidResource>
     <AndroidResource Include="Resources\layout\layout_toolbar.axml" />
     <AndroidResource Include="Resources\layout\activity_main_container.axml" />
   </ItemGroup>

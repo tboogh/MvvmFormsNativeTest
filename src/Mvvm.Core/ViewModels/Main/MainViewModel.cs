@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Windows.Input;
@@ -7,10 +7,6 @@ using MvvmCross.Navigation;
 
 namespace Mvvm.Core.ViewModels.Main
 {
-    public class SecondViewModel : BaseViewModel{
-
-    }
-
     public class MainViewModel : BaseViewModel
     {
         readonly IMvxNavigationService _navigationService;
