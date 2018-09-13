@@ -17,6 +17,8 @@ using Xamarin.Forms.Platform.iOS;
 
 namespace Mvvm.iOS.Presenter
 {
+    
+
     public class FormsPagePresenter : MvxIosViewPresenter
     {
         public FormsPagePresenter(IUIApplicationDelegate applicationDelegate, UIWindow window) : base(applicationDelegate, window)

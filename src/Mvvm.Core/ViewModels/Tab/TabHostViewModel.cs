@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Windows.Input;
 using Mvvm.Core.ViewModels.Main;
 using MvvmCross.Commands;
@@ -19,21 +19,6 @@ namespace Mvvm.Core.ViewModels.Tab
         public ICommand ShowTabBCommand => new MvxAsyncCommand(() => _navigationService.Navigate<TabBViewModel>());
         public ICommand ShowTabCCommand => new MvxAsyncCommand(() => _navigationService.Navigate<TabCViewModel>());
         public ICommand ShowFormsTab => new MvxAsyncCommand(() => _navigationService.Navigate<FormsTabViewModel>());
-
-    }
-
-    public class TabAViewModel : BaseViewModel
-    {
-
-    }
-
-    public class TabBViewModel : BaseViewModel
-    {
-
-    }
-
-    public class TabCViewModel : BaseViewModel
-    {
 
     }
 }
