@@ -21,22 +21,22 @@ namespace Mvvm.Droid.Views.Tab
         public override View OnCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
         {
             var view = base.OnCreateView(inflater, container, savedInstanceState);
-            var viewPager = view.FindViewById<ViewPager>(Resource.Id.viewpager);
-            if (viewPager == null)
-                return view;
+            //var viewPager = view.FindViewById<ViewPager>(Resource.Id.viewpager);
+            //if (viewPager == null)
+            //    return view;
 
-            var fragments = new List<MvxViewPagerFragmentInfo>()
-            {
-                new MvxViewPagerFragmentInfo("Tab A", typeof(TabAFragment), typeof(TabAViewModel)),
-                new MvxViewPagerFragmentInfo("Tab B", typeof(TabAFragment), typeof(TabAViewModel)),
-                new MvxViewPagerFragmentInfo("Tab C", typeof(TabAFragment), typeof(TabAViewModel)),
-                //new MvxViewPagerFragmentInfo("Tab D", typeof(Fragment), typeof(FormsTabViewModel)),
-            };
+            //var fragments = new List<MvxViewPagerFragmentInfo>()
+            //{
+            //    new MvxViewPagerFragmentInfo("Tab A", typeof(TabAFragment), typeof(TabAViewModel)),
+            //    new MvxViewPagerFragmentInfo("Tab B", typeof(TabAFragment), typeof(TabAViewModel)),
+            //    new MvxViewPagerFragmentInfo("Tab C", typeof(TabAFragment), typeof(TabAViewModel)),
+            //    //new MvxViewPagerFragmentInfo("Tab D", typeof(Fragment), typeof(FormsTabViewModel)),
+            //};
 
-            viewPager.Adapter = new MvxCachingFragmentStatePagerAdapter(Activity, ChildFragmentManager, fragments);
+            //viewPager.Adapter = new MvxCachingFragmentStatePagerAdapter(Activity, ChildFragmentManager, fragments);
 
-            var tabLayout = view.FindViewById<TabLayout>(Resource.Id.tabs);
-            tabLayout.SetupWithViewPager(viewPager);
+            //var tabLayout = view.FindViewById<TabLayout>(Resource.Id.tabs);
+            //tabLayout.SetupWithViewPager(viewPager);
 
             return view;
         }
